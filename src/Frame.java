@@ -10,7 +10,7 @@ public class Frame {
 	
 	public int getFirstThrow() {
 		return firstThrow;
-	}
+	} 
 
 	public int getSecondThrow() {
 		return secondThrow;

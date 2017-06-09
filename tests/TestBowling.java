@@ -29,7 +29,7 @@ public class TestBowling {
 			BowlingGame bow= new BowlingGame();
 			assertEquals(bow.frame("10,5",10);
 		}
-	@Test(excepted=BowlingException.class)
+	@Test(excepted=BowlingException.class) 
 	 public void Add_frame5 throws 	BowlingException {
 			BowlingGame bow= new BowlingGame();
 			assertEquals(bow.frame("3,7",10);

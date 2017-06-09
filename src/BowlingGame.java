@@ -10,7 +10,7 @@ public class BowlingGame {
 	private List<Frame> frames = new ArrayList<Frame>();
 	private Frame bonus;
 	int number;
-	
+	 
 	public BowlingGame(){}
 	
 	// adds a frame to the game
