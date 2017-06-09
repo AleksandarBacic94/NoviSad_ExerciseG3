@@ -1,6 +1,7 @@
 public class Frame {
 	private int firstThrow;
 	private int secondThrow;
+	private int number;
 	
 	public Frame(int firstThrow, int secondThrow){
 		this.firstThrow = firstThrow;
@@ -17,19 +18,82 @@ public class Frame {
 
 	//returns the score of a single frame
 	public int score(){
-		//to be implemented
-		return 0;
+	firstThrow=0;
+	 secondThrow=0;
+	 public int Frame(String number) throws BowlingException{
+		 
+	 		if(number==""){
+	 			return 0;
+	 		}
+	 		else{
+	 			String  brojevi [] =numbersStr.split(",|\\\n");
+	 			int duzina=brojevi.length;
+	 			int rezultat=0;
+	 			for(int i=0;i<10;i++){
+	 				int broj=Integer.parseInt(brojevi[i]);
+	 				if(broj>0){
+	 					rezultat=rezultat+broj; 
+	 				}
+	 				else{
+	 					throw new BowlingException();
+	 				}
+	 
+	 			}
+	 			if(rezultat==Integer.parseInt(brojevi[0]))
+	 			{
+	 				throw new BowlingException();
+	 			}
+	 			else{
+	 				return rezultat;
+	 			}
+	 		}
+	 	}
 	}
 
 	//returns whether the frame is a strike or not
 	public boolean isStrike(){
-		//to be implemented
-		return false;
+	int rezultat; 
+		for(int i=1;i<10;i++){
+				int broj=Integer.parseInt(brojevi[i]);
+				if(firstThrow=10 && secondThrow =10){
+					rezultat= firstThrow+ secondThrow;
+				}
+				else{
+					throw new BolwingException();
+				}
+
+			}
+			if(rezultat==Integer.parseInt(brojevi[0]))
+			{
+				throw new BolwingException();
+			}
+			else{
+				return rezultat;
+			}
+		}
 	}
 	
 	//return whether a frame is a spare or not
 	public boolean isSpare(){
-		//to be implemented
+			
+			public int Spare(String numbers) throws BowlingException {
+				int res=0;
+				if(number == "")
+					return 0;
+				else{
+					String[] stringNumbers = numbersStr.split(",|\\\n");
+					for(int i=0; i<stringNumbers.length; i++)
+					{
+						if(Integer.parseInt(stringNumbers[i]) < 0)
+							throw new BowlingException();
+						else
+							res+=Integer.parseInt(stringNumbers[i]);
+					}
+					return res;
+				}
+			
+			}
 		return false;
 	}
 }
+
